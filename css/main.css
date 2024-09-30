@@ -1,0 +1,57 @@
+img {
+    display: grid;
+    height: 50%;
+    width: 25%;
+    border-style: inset;
+    box-shadow: 10px 5px 5px red;
+}
+
+#contenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #2196F3;
+    padding: 5px;
+}
+
+/*Movil pequeño*/
+@media (min-width: 576px){
+    img {
+        display: grid;
+        height: 60%;
+        width: 30%;
+        border-style: inset;
+        box-shadow: 10px 5px 5px red;
+    }
+    #galeria{
+        font-size: 10rem;
+    }
+}
+
+/*Tablet*/
+@media (min-width:768px){
+    img {
+        display: grid;
+        height: 70%;
+        width: 35%;
+        border-style: inset;
+        box-shadow: 10px 5px 5px red;
+    }
+    #galeria{
+        font-size: 10rem;
+    }
+
+}
+/*Escritura grande*/
+@media (min-width:1200px){
+    img {
+        display: grid;
+        height: 80%;
+        width: 40%;
+        border-style: inset;
+        box-shadow: 10px 5px 5px red;
+    }
+    #galeria{
+        font-size: 10rem;
+    }
+
+}
