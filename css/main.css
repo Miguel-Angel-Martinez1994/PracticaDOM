@@ -13,6 +13,12 @@ img {
     padding: 5px;
 }
 
+#galeria{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
 /*Movil pequeño*/
 @media (min-width: 576px){
     img {
@@ -23,7 +29,9 @@ img {
         box-shadow: 10px 5px 5px red;
     }
     #galeria{
-        font-size: 10rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
 
@@ -37,7 +45,8 @@ img {
         box-shadow: 10px 5px 5px red;
     }
     #galeria{
-        font-size: 10rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
     }
 
 }
@@ -51,7 +60,8 @@ img {
         box-shadow: 10px 5px 5px red;
     }
     #galeria{
-        font-size: 10rem;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
     }
 
 }
