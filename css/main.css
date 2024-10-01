@@ -1,16 +1,26 @@
-img {
-    display: grid;
-    height: 50%;
-    width: 25%;
-    border-style: inset;
-    box-shadow: 10px 5px 5px red;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+#altIMG{
+    border: 10px, inset, gray;
 }
 
 #contenedor{
     display: grid;
-    grid-template-columns: 1fr;
     background-color: #2196F3;
-    padding: 5px;
+}
+
+#tittleGalery{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: orange;
 }
 
 #galeria{
@@ -19,49 +29,59 @@ img {
     gap: 1rem;
 }
 
-/*Movil pequeño*/
-@media (min-width: 576px){
-    img {
-        display: grid;
-        height: 60%;
-        width: 30%;
-        border-style: inset;
-        box-shadow: 10px 5px 5px red;
+/*Tablet*/
+@media (min-width: 768px){
+    img{
+        width: 100%;
     }
+
+    #tittleGalery{
+        font-size: 35px;
+        font-family: 'Times New Roman', Times, serif;
+        color: orange;
+    }
+    
     #galeria{
-        display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
+        border: 5px ,solid, black;
     }
 }
 
-/*Tablet*/
-@media (min-width:768px){
-    img {
-        display: grid;
-        height: 70%;
-        width: 35%;
-        border-style: inset;
-        box-shadow: 10px 5px 5px red;
+/*Pantallas pequeñas Ordenador*/
+@media (min-width: 992px){
+    img{
+        width: 100%;
     }
+
+    #tittleGalery{
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+        color: orange;
+    }
+
     #galeria{
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2,2fr);
+        gap: 1rem;
     }
 
 }
-/*Escritura grande*/
-@media (min-width:1200px){
+/*Pantalla grande*/
+@media (min-width: 1200px){
     img {
-        display: grid;
-        height: 80%;
-        width: 40%;
-        border-style: inset;
-        box-shadow: 10px 5px 5px red;
+        width: 100%;
     }
+
+    #tittleGalery{
+        font-size: 45px;
+        font-family: 'Times New Roman', Times, serif;
+        color: orange;
+    }
+
     #galeria{
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(4,2fr);
     }
 
 }
