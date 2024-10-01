@@ -64,25 +64,33 @@ const imagenRandom=()=>{
 }
 
 const galeriaImagenes=()=>{
+    //creamos el elemento figure que necesitaremos para el pie de pagina
+    const piePagina=document.createElement("FIGURE");
+    galeria.append(piePagina);
     //recorremos el array de imagenes y crearemos una <img> para cada uno
     galeriaFotos.forEach((posicion)=>{
         //creamos una etiqueta imagen para cada foto de la galeria
         const imagenGaleria=document.createElement("IMG");
-
+        const paginaPie=document.createElement
+        ("FIGCAPTION");
         //creamos las clases que vamos a usar y asignar
         imagenGaleria.classList.add("src");
         imagenGaleria.classList.add("alt");
         imagenGaleria.classList.add("tittle");
+        imagenGaleria.classList.add("id");
 
         imagenGaleria.src=posicion.src;
         imagenGaleria.alt=posicion.alt;
         imagenGaleria.title=posicion.title;
+        
+        paginaPie.textContent=`Esta es la foto ${posicion.id}`;
 
-        fragment.append(imagenGaleria);
+        fragment.append(imagenGaleria,paginaPie);
     })
 
     //mostramos todas las imagenes al final del div galeria
     galeria.append(fragment);
+    
 }
 
 //funcion anonima auto-ejecutable para arrancar las funciones
