@@ -1,0 +1,39 @@
+// inicio de la pagina que mostrara la pagina de tal
+const init()=>{
+	//llamar a la funcion de imagen random
+	imagenRandom();
+
+	//llamar galeria que mostrara todas las imagenes
+	galeria();
+}
+
+
+
+const imagenRandom()=>{
+	//accediendo a la imagen con id de "altIMG", le pasaremos los valores de src y alt
+	//teniendo previamente hecho un array con todas las fotos declaradas
+
+	//paso-1 generamos un numero RAndom que este entre el 0-6 (tamaño del array)
+	numerinRANDOM=math.random(DE TAL)
+
+	//paso2- asignamos a "altIMG" en src y alt el aleatorio generado
+	nombreVArible"altIMG".src[numerinRANDOM]
+	nombreVAriable"altIMG".alt[numerinRANDOM]
+	
+	//paso3- con un document.write devolvemos el "altIMG"
+}
+
+
+const galeria()=>{
+	//accediendo al div "galeria", recorreremos el array de las imagenes,crearemos img 
+	//asignandoles los valores de los objetos de dentro del array
+
+	//paso-1 recorremos el array con los objetos de las imagenes, en cada vuelta creamos en el html un componente <img>
+	//asignandole los valores del objeto foto[i] y guardamos esa <img> en un array fragment
+
+	//paso-2 mostramos el array fragment con todas las imagenes creadas
+
+}
+
+
+init();
