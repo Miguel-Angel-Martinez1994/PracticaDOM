@@ -1,11 +1,5 @@
-//variables donde llamamos a los elementos del DOM
-const cuadro =document.querySelector("#cabecera");
-const galeriaFotos=document.querySelector("#contenedor");
-const galeriaTxt=document.querySelector("#galeria");
-const imagen=document.querySelector("img");
-
-//fragment que usaremos para pintar las imagenes sin sobrecargar
-const fragment=document.createDocumentFragment();
+//asignacion de los elementos del HTML
+const imagenAlt=document.querySelector("#altIMG");
 
 //array de las imagenes
 const array=[
@@ -53,27 +47,26 @@ const array=[
     }
 ]
 
-/*
-const cuadro =document.querySelector("#cabecera");=>Lugar donde ira el titulo
-const galeriaFotos=document.querySelector("#contenedor");=>contenedor donde se alojara la imagen random
-const imagen=document.querySelector("img");=>imagen que sera la imagen random
---------------------------------------------------------------
-const galeriaTxt=document.querySelector("#galeria");=>contenedor donde se mostraran todas las imagenes como si de una galeria se tratara
-*/
-const imagenAleatoria=()=>{
-    //generamos numero aleatorio
-    let aleatorio = Math.floor(Math.random() * arrayImagenes.length);
+const imagenRandom=()=>{
+    //generamos numero aleatorio y variables auxiliares
+    let aleatorio = Math.floor(Math.random() * array.length);
 
-    //recorremos el array
-    array.forEach((item)=>{
-        //creamos y asignamos a un parrafo el texto del titulo de la foto random
-        const titulo=document.createElement("P");
-        titulo.textContent=item.title;
+    //asignamos a imagenALT el src y alt, en base al numero random
+    imagenAlt.classList.add("src");
+    imagenAlt.classList.add("alt");
 
-        imagen.src=item.src;
-        imagen.alt=item.alt;
-    })
+    imagenAlt.src=array[aleatorio].src;
+    imagenAlt.alt=array[aleatorio].alt;
 }
 
-imagenAleatoria();
+const galeriaImagenes=()=>{
 
+}
+
+//funcion anonima auto-ejecutable para arrancar las funciones
+(function (){
+    //llamada a las funciones para ejecutarlas
+    imagenRandom();
+    galeriaImagenes();
+
+})();
